@@ -1,1 +1,107 @@
 @import "tailwindcss";
+
+.enrollment-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.enrollment-form-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.fields-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+  padding: 1.25rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+.field-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+}
+
+.field-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.field-required {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.field-error {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #b91c1c;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #111827;
+  background-color: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.field-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.enrollment-form button[type="submit"] {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.enrollment-form button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+.form-success {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #15803d;
+}
+
+@media (max-width: 600px) {
+  .fields-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .enrollment-form {
+    padding: 1rem;
+  }
+}
